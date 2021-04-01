@@ -39,7 +39,7 @@ namespace Stajyerler.View.Controllers
             {
                 var result = await SignInMgr.PasswordSignInAsync(user.Email, user.Password, user.RememberMe, false);
 
-                if (result.Succeeded)//buraya token eklenecek
+                if (result.Succeeded)
                 {
                     var _symmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(StajyerJwtTokens.Key));
                     var credentials = new SigningCredentials(_symmetricSecurityKey, SecurityAlgorithms.HmacSha256);
