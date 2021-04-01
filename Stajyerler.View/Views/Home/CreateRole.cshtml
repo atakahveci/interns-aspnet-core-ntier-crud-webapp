@@ -1,0 +1,39 @@
+﻿@model Stajyerler.View.Models.ProjectRole
+
+@{
+    ViewData["Title"] = "CreateRole";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<div class="normaltext">
+    <div class="hakdiv"
+         id="divhak"
+         style="display: block; margin: 0 auto; margin-top:15px; margin-bottom: 160px;">
+
+        <center>
+            <div class="CardDiv">
+                <div class="GreenTitleDiv">
+                    <h3 style=" float:left; margin-top: 1px; margin-left: 8px; padding-left: 6px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Rol Ekleme</h3>
+                </div>
+                <div style="padding:15px 16px 15px 16px; height:auto; ">
+                    <p style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:15px;font-weight:400; color:#5E5E5E; text-align:left;">
+                        Aşağıda görmüş olduğunuz alanda istediğiniz Rol'ü ekleyebilirsiniz. Rol adını doğru girdiğinizden emin olun! Sonrasında düzenlenemez!
+                    </p> <br />
+
+                    <form asp-action="CreateRole" class="form-signin">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-label-group" style="color:#727C8E; font-size:15px">
+                            <input asp-for="RoleName" placeholder="Rol Adı" required class="inputtza">
+                        </div>
+                        <div>
+                            <a asp-action="Index"><button type="button" class="btn btn-dark" style="display: inline; border-radius: 0.6rem; font-family: 'Segoe UI'; padding: 7px 18px 7px 18px; font-size: 15px; font-weight: 500; width: 40%; margin-right:10px;">Geri Dön</button></a>
+                            <input type="submit" value="Ekle" style="display: inline; border-radius: 0.6rem; font-family: 'Segoe UI'; padding: 7px 18px 7px 18px; font-size: 15px; font-weight: 500; width: 40%;" class="btn btn-dark" />
+                        </div>
+
+                        <br />
+                    </form>
+                </div>
+            </div>
+        </center>
+    </div>
+</div>

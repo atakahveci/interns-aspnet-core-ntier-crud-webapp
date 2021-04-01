@@ -1,0 +1,108 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<AppUser> SignInManager
+@inject UserManager<AppUser> UserManager
+
+
+@{
+    ViewData["Title"] = "Profil";
+    Layout = "~/Views/Shared/ProfilLayout.cshtml";
+}
+
+
+
+<div class="normaltext">
+    <div class="hakdiv"
+         id="divhak"
+         style="display: block; margin: 0 auto; margin-top:15px; margin-bottom: 160px;">
+
+        <center>
+            <div class="CardDiv">
+                <div class="GreenTitleDiv">
+                    <h3 style=" float:left; margin-top: 1px; margin-left: 8px; padding-left: 6px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Profil</h3>
+                </div>
+                <div style="padding:15px 16px 15px 16px; height:auto; ">
+                    <p style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size:15px;font-weight:400; color:#5E5E5E; text-align:left;">
+                        Profilinize Hoşgeldiniz! Aşağıda size ait stajyer bilgileriz bulunmaktadır. Şifrenizi değiştirmek istiyorsanız sağ alt köşedeki düzenle butonuna basınız!
+                    </p> <br />
+
+                    @if (SignInManager.IsSignedIn(User))
+                    {
+                        var LoggedInUser = await UserManager.GetUserAsync(User);
+
+                        <div style="text-align:left;font-family:'Segoe UI'; font-size:15px;font-weight:400; color:#5E5E5E; ">
+                            <dl>
+                                <dt class="col-sm-2">
+                                    Id
+                                </dt>
+                                <dd class="col-sm-10">
+                                    @LoggedInUser.Id
+                                </dd>
+                                <dt class="col-sm-2">
+                                    Name
+                                </dt>
+                                <dd class="col-sm-10">
+                                    @LoggedInUser.Name
+                                </dd>
+                                <dt class="col-sm-2">
+                                    Surname
+                                </dt>
+                                <dd class="col-sm-10">
+                                    @LoggedInUser.Surname
+                                </dd>
+                                <dt class="col-sm-2">
+                                    University
+                                </dt>
+                                <dd class="col-sm-10">
+                                    @LoggedInUser.University
+                                </dd>
+                                <dt class="col-sm-2">
+                                    Email
+                                </dt>
+                                <dd class="col-sm-10">
+                                    @LoggedInUser.Email
+                                </dd>
+                                <dt class="col-sm-2">
+                                    Major
+                                </dt>
+                                <dd class="col-sm-10">
+                                    @LoggedInUser.Major
+                                </dd>
+                                <dt class="col-sm-2">
+                                    Department
+                                </dt>
+                                <dd class="col-sm-10">
+                                    @LoggedInUser.Department
+                                </dd>
+                            </dl>
+                        </div>
+
+                    }
+                    
+                    else
+                    {
+                       <p> NO DATA. ERROR 404.</p>
+                    }
+
+                    
+                <div style="float:right; padding:10px;">
+                    @Html.ActionLink("Düzenle", "Edit", new {/* id = LoggedInUser.Id*/ }, new { @class = "btn btn-dark" })
+                    <a href="/General/Logout"><button class="btn btn-dark" type="button" style=" margin-left:10px;">Çıkış Yap</button></a>
+                </div>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+
+                </div>
+            </div>
+            <br />
+            <br />
+        </center>
+    </div>
+    <br />
+    <br />
+</div>
+
+
+
