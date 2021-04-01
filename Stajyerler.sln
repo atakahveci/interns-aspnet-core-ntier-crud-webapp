@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stajyerler.Business", "Staj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stajyerler.API", "Stajyerler.API\Stajyerler.API.csproj", "{982774FE-DCAD-4581-8202-77CD1683BA6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stajyerler.View", "Stajyerler.View\Stajyerler.View.csproj", "{E9DBFF5D-2506-4DE7-94B2-54B20757B946}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stajyerler.View", "Stajyerler.View\Stajyerler.View.csproj", "{E9DBFF5D-2506-4DE7-94B2-54B20757B946}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
