@@ -5,3 +5,4 @@ Stajyerler uygulaması .NET CORE ile katmanlı mimari yapısı üzerinde tecrüb
 Teorik ve temel bilgileri öğrendikçe uygulamaya ekleyerek hem API tabanlı hem de ASP Identity ile CRUD işlemleri gerçekleştirildi.
 Uygulama ilk olarak sadece arka yüz de Postman üzerinden testler gerçekleştirilerek geliştirildi. 
 Sonrasında, katmanlı yapı içerisine MVC proje önyüz katmanı eklenerek API CRUD yapısı ile iletişimi sağlandı.
+Identity Role, JWT, Authorization & Authentication.
