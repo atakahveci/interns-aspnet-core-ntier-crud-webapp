@@ -6,3 +6,5 @@ Teorik ve temel bilgileri öğrendikçe uygulamaya ekleyerek hem API tabanlı he
 Uygulama ilk olarak sadece arka yüz de Postman üzerinden testler gerçekleştirilerek geliştirildi. 
 Sonrasında, katmanlı yapı içerisine MVC proje önyüz katmanı eklenerek, API CRUD yapısı ile iletişimi sağlandı.
 Identity Role, JWT, Authorization & Authentication.
+
+![](stajyerlerpng.png)
